@@ -2,7 +2,7 @@ name: Despliegue de Flutter PWA
 
 on:
   push:
-    # Se activa al subir cambios a la rama principal (main)
+    # El flujo se activa cuando subes cambios a la rama principal (main)
     branches:
       - main 
   
@@ -23,8 +23,8 @@ jobs:
         run: flutter pub get
         
       - name: Compilar PWA (Flutter Web)
-        run: flutter build web --web-renderer html --base-href /agentesmartai-Liderazgo_Transformacional_ISDEMU/
-        # ¡IMPORTANTE! El nombre de tu repositorio ya está aquí.
+        run: flutter build web --base-href /[TU_NOMBRE_DE_REPOSITORIO]/
+        # ¡IMPORTANTE! El argumento --web-renderer ha sido ELIMINADO.
 
       - name: Desplegar a GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
