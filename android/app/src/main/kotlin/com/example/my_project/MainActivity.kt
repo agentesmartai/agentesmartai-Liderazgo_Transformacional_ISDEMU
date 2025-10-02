@@ -1,0 +1,6 @@
+package com.mycompany.liderazgotranformacional
+
+import io.flutter.embedding.android.FlutterActivity
+
+class MainActivity: FlutterActivity() {
+}
