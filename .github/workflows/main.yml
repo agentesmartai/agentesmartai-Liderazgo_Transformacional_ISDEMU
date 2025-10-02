@@ -3,7 +3,7 @@ name: Despliegue de Flutter PWA
 
 on:
   push:
-    # El flujo se activa cuando subes cambios a la rama principal (main)
+    # Se activa al subir cambios a la rama principal (main)
     branches:
       - main 
   
@@ -24,13 +24,12 @@ jobs:
         run: flutter pub get
         
       - name: Compilar PWA (Flutter Web)
-        run: flutter build web --web-renderer html --base-href /[TU_NOMBRE_DE_REPOSITORIO]/
-        # ¡IMPORTANTE! Reemplaza este texto con el nombre exacto de tu repositorio.
+        run: flutter build web --web-renderer html --base-href /agentesmartai-Liderazgo_Transformacional_ISDEMU/
+        # ¡IMPORTANTE! El nombre de tu repositorio ya está aquí.
 
       - name: Desplegar a GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
         with:
-          # Usa el Secreto que creaste (ej: DEPLOY_TOKEN)
           github_token: ${{ secrets.DEPLOY_TOKEN }}
           publish_dir: ./build/web
           publish_branch: gh-pages
