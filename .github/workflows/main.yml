@@ -24,11 +24,12 @@ jobs:
         
       - name: Compilar PWA (Flutter Web)
         run: flutter build web --base-href /[TU_NOMBRE_DE_REPOSITORIO]/
-        # ¡IMPORTANTE! El argumento --web-renderer ha sido ELIMINADO.
+        # ¡IMPORTANTE! El argumento --web-renderer ya no está.
 
       - name: Desplegar a GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
         with:
-          github_token: ${{ secrets.DEPLOY_TOKEN }}
+          # Usamos Token_PWA que ya creaste y actualizaste.
+          github_token: ${{ secrets.Token_PWA }}
           publish_dir: ./build/web
           publish_branch: gh-pages
