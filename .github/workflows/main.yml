@@ -1,5 +1,4 @@
-agentesmartai-Liderazgo_Transformacional_ISDEMU
-name: Despliegue de Flutter PWA
+name: agentesmartai-Liderazgo_Transformacional_ISDEMU
 
 on:
   push:
